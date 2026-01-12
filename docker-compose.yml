@@ -10,10 +10,11 @@ services:
     environment:
       TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}
       ALLOWED_TELEGRAM_USER_ID: ${ALLOWED_TELEGRAM_USER_ID}
-      DOWNLOAD_ROOT: /data
+      DOWNLOAD_ROOT: ${DOWNLOAD_ROOT}
+      UPLOAD_ROOT: ${UPLOAD_ROOT}
     volumes:
-      - /data:/data:rw
-      # Edit this path to be able to access the folder from the host machine
+      - ${DOWNLOAD_ROOT}:${DOWNLOAD_ROOT}:rw
+      - ${UPLOAD_ROOT}:${UPLOAD_ROOT}:rw
     # Security hardening (works in Portainer standalone stacks)
     read_only: true
     cap_drop:
