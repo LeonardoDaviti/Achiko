@@ -61,3 +61,7 @@ This bot downloads any media you send or forward to it (photos, videos, document
 - v2: sort into type-based subfolders, optional daily subfolders, dedup policies.
 - v3: webhook mode behind HTTPS and reverse proxy.
 - v4: cleanup/backup tasks, multi-user allowlist (if needed).
+
+### Installation
+
+update the data field to include your photos there.
